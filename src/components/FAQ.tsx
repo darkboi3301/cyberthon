@@ -8,7 +8,7 @@ const FAQ = () => {
     const faqs = [
         {
             question: "What's the date and venue of cyberthon?",
-            answer: "To be announced "
+            answer: "Cyberthon will be start on 1st February 2025 and end on 2nd February 2025 at YuniQ, Tharamani"
         },
         {
             question: "What's the duration of cyberthon?",

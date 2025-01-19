@@ -5,20 +5,12 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const FooterMobile = () => {
   return (
-    <footer className="mt-52 text-white py-6 bg-black w-full">
-        <div
-            style={{
-              width: "70%",
-              height: "2px",
-              margin: "0 auto",
-              background:
-                "linear-gradient(to right, rgba(0, 0, 0, 0.1), #ffffff, rgba(0, 0, 0, 0.1))",
-            }}
-          ></div>
+    <footer className=" text-white py-6 bg-black w-full">
+       
       <div className="mt-2 mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         {/* First Column (Contact Information) */}
         <div className="flex-1 flex flex-col items-center">
-          <h2 className="font-bold text-lg md:text-2xl">Abdul Aleem: +91 91507 38865</h2>
+          <h2 className="font-bold text-lg md:text-2xl">Gokul R: +91 93849 18930</h2>
         </div>
 
         {/* Second Column (Social Media Links) */}

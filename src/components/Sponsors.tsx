@@ -58,15 +58,7 @@ const Sponsors = () => {
             height: "2px",
           }}
         >
-          <div
-            style={{
-              width: "70%",
-              height: "2px",
-              margin: "0 auto",
-              background:
-                "linear-gradient(to right, rgba(0, 0, 0, 0.1), #ffffff, rgba(0, 0, 0, 0.1))",
-            }}
-          ></div>
+          
         </div>
       </div>
     </div>

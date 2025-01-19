@@ -9,7 +9,7 @@ const FooterDesktop = () => {
             <div className="container mx-auto flex justify-between">
                 {/* First Column */}
                 <div className="flex-1 flex flex-col items-center">
-                    <h2 className="font-bold text-2xl">Abdul Aleem : +91 91507 38865</h2>
+                    <h2 className="font-bold text-2xl">Gokul R: +91 93849 18930</h2>
                 </div>
                 {/* Second Column */}
                 <div className="flex-1 flex flex-col items-center">
