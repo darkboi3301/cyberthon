@@ -13,6 +13,7 @@ const HeroSectionDesktop = () => {
     minutes: 0
   });
   const [showRegisterButton, setShowRegisterButton] = useState(false); // State to control the visibility of the register button
+  const buttonRef = useRef(null); // Ref for Register Now button
 
   // Function to update text sizes based on viewport
   const updateTextSizes = () => {
@@ -48,7 +49,6 @@ const HeroSectionDesktop = () => {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         return { days, hours, minutes };
       }
@@ -81,7 +81,14 @@ const HeroSectionDesktop = () => {
         "<"
       )
       .addLabel("end")
-      .call(() => setShowRegisterButton(true)); // Show the button after the animation is done
+      .call(() => {
+        setShowRegisterButton(true); // Show the button after animation
+        gsap.fromTo(
+          buttonRef.current, 
+          { opacity: 0, y: 50 }, 
+          { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+        ); // Fade-in and slide up animation for the button
+      });
 
     return () => {
       window.removeEventListener('resize', updateTextSizes);
@@ -93,13 +100,28 @@ const HeroSectionDesktop = () => {
   return (
     <div
       ref={heroSectionRef}
-      className="hero-section"
       style={{
         height: "100vh",
         position: "relative",
         overflow: "hidden",
+        marginTop: "20px",
+        background: "linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)", // Lightened vertical gradient
       }}
     >
+      {/* Vertical Spotlight Effect */}
+      <div 
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          background: "radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%)", // Subtle, soft light from top to bottom
+          animation: "spotlightMove 5s linear infinite", 
+          zIndex: 1,
+        }}
+      ></div>
+
       {/* Background CYBERTHON text */}
       <div
         ref={cyberTextRef}
@@ -113,7 +135,7 @@ const HeroSectionDesktop = () => {
           color: "rgba(255, 255, 255, 1)", // More transparent
           fontWeight: "bold",
           letterSpacing: "0.5rem",
-          zIndex: 1,
+          zIndex: 2,
           userSelect: "none", // Prevent text selection
           whiteSpace: "nowrap", // Prevent text wrapping
         }}
@@ -159,52 +181,43 @@ const HeroSectionDesktop = () => {
         </p>
       </div>
 
-      {/* Register Button */}
+      {/* Register Button with Animation */}
       {showRegisterButton && (
-        <>
-          <button
-            onClick={() => nav("/register")}
-            style={{
-              position: "absolute",
-              bottom: "5%",
-              left: "1%",
-              padding: "10px 20px",
-              backgroundColor: "#FFFFFF",
-              color: "#000000",
-              border: "none",
-              fontSize: "16px",
-              cursor: "pointer",
-              zIndex: 4
-            }}
-          >
-            <span style={{ paddingRight: "100px" }}>
-              Register Now
-            </span>
-            <span>
-              &#62;
-            </span>
-          </button>
-          <div
-            onClick={() => alert("Navigate to registration page")}
-            style={{
-              position: "absolute",
-              bottom: "5%",
-              right: "1%",
-              padding: "10px 20px",
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-              zIndex: 4
-            }}
-          >
-            <h1 className="text-3xl">
-              Feb 01 <br /> & 02
-            </h1>
-            <p>A high-stakes arena where <br /> top minds tackle real-world <br /> problems.</p>
-          </div>
-        </>
+        <button
+          ref={buttonRef}
+          onClick={() => nav("/register")}
+          className="bg-white text-black font-semibold text-lg rounded-xl shadow-lg flex items-center space-x-4 transform hover:scale-105 hover:bg-gray-100 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
+          style={{
+            position: "absolute",
+            bottom: "7%",
+            left: "2%",
+            padding: "10px 20px",
+            zIndex: 4
+          }}
+        >
+          <span>Register Now</span>
+          <span className="text-xl">&#62;</span>
+        </button>
       )}
+
+      {/* Additional Info */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "5%",
+          right: "1%",
+          padding: "10px 20px",
+          color: "#fff",
+          border: "none",
+          borderRadius: "5px",
+          zIndex: 4
+        }}
+      >
+        <h1 className="text-3xl">
+          Feb 01 <br /> & 02
+        </h1>
+        <p>A high-stakes arena where <br /> top minds tackle real-world <br /> problems.</p>
+      </div>
     </div>
   );
 };

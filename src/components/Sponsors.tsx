@@ -1,9 +1,9 @@
 import React from "react";
 
 const sponsors = [
-  { logo: "polygon.svg", name: "" },
-  { logo: "ethindia.svg", name: "" },
-  { logo: "fold.svg", name: "" },
+  { logo: "yuniq.svg", name: "" },
+  { logo: "null.png", name: "" },
+
 ];
 
 const Sponsors = () => {
@@ -32,7 +32,7 @@ const Sponsors = () => {
             }}
           ></div>
         </div>
-        <h2 style={{ fontSize: "2.5rem", margin: "2rem 0" }}>Our Sponsors</h2>
+        <h2 style={{ fontSize: "2.5rem", margin: "2rem 0" }}>Our Partners</h2>
         <div
           style={{
             display: "flex",
@@ -42,12 +42,12 @@ const Sponsors = () => {
             overflowX: "auto",
           }}
         >
-          {/* {sponsors.map((sponsor, index) => (
-            <div key={index} style={{ display: 'flex', alignItems: 'center', marginRight: index !== sponsors.length - 1 ? '2rem' : '0', minWidth: '150px' }}>
+          {sponsors.map((sponsor, index) => (
+            <div key={index} style={{ display: 'flex', alignItems: 'center', marginRight: index !== sponsors.length - 1 ? '2rem' : '0', minWidth: '150px',paddingBottom:"2rem", }}>
               <img src={`/sponsors/${sponsor.logo}`} alt={sponsor.name} style={{ maxHeight: '80px', marginRight: '1rem' }} />
               <p style={{ fontSize: '0.875rem' }}>{sponsor.name}</p>
             </div>
-          ))} */}
+          ))}
         </div>
         <div
           style={{
