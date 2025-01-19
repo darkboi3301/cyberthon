@@ -1,33 +1,47 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const FooterMobile = () => {
   return (
-    <footer className="text-white py-6">
-    <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="mb-4 md:mb-0">
-            <h5 className="text-lg font-bold mb-2">Contact Us</h5>
-            <p>Email: contact@example.com</p>
-            <p>Phone: +123 456 7890</p>
+    <footer className="mt-52 text-white py-6 bg-black w-full">
+        <div
+            style={{
+              width: "70%",
+              height: "2px",
+              margin: "0 auto",
+              background:
+                "linear-gradient(to right, rgba(0, 0, 0, 0.1), #ffffff, rgba(0, 0, 0, 0.1))",
+            }}
+          ></div>
+      <div className="mt-2 mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        {/* First Column (Contact Information) */}
+        <div className="flex-1 flex flex-col items-center">
+          <h2 className="font-bold text-lg md:text-2xl">Abdul Aleem: +91 91507 38865</h2>
         </div>
-        <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .733.592 1.325 1.325 1.325h11.497v-9.272h-3.122v-3.622h3.122v-2.672c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.461.099 2.791.142v3.24l-1.917.001c-1.504 0-1.795.716-1.795 1.764v2.313h3.59l-.467 3.622h-3.123v9.272h6.117c.733 0 1.325-.592 1.325-1.325v-21.35c0-.733-.592-1.325-1.325-1.325z"/>
-                </svg>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.717 0-4.917 2.2-4.917 4.917 0 .385.044.76.127 1.122-4.083-.205-7.702-2.16-10.124-5.134-.423.725-.666 1.562-.666 2.457 0 1.695.863 3.19 2.173 4.065-.803-.025-1.56-.246-2.22-.616v.062c0 2.366 1.684 4.342 3.918 4.788-.411.112-.845.171-1.292.171-.316 0-.624-.03-.924-.086.625 1.951 2.438 3.374 4.584 3.414-1.68 1.318-3.808 2.104-6.114 2.104-.398 0-.79-.023-1.176-.069 2.179 1.396 4.768 2.212 7.548 2.212 9.057 0 14.01-7.508 14.01-14.01 0-.213-.005-.425-.014-.636.958-.692 1.787-1.56 2.443-2.549z"/>
-                </svg>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12.004 2.162c-5.522 0-10.003 4.481-10.003 10.002 0 4.419 2.867 8.166 6.839 9.489.5.091.682-.218.682-.481 0-.237-.009-.866-.014-1.699-2.782.606-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.621.069-.608.069-.608 1.003.071 1.531 1.031 1.531 1.031.891 1.527 2.341 1.086 2.911.83.091-.646.349-1.086.635-1.336-2.22-.252-4.555-1.111-4.555-4.946 0-1.092.39-1.984 1.029-2.682-.103-.253-.447-1.267.099-2.64 0 0 .84-.269 2.75 1.026a9.573 9.573 0 0 1 2.5-.336c.847.003 1.699.114 2.5.336 1.91-1.295 2.75-1.026 2.75-1.026.546 1.373.202 2.387.099 2.64.64.698 1.029 1.59 1.029 2.682 0 3.843-2.339 4.691-4.566 4.938.359.309.678.92.678 1.855 0 1.339-.012 2.421-.012 2.748 0 .265.18.576.688.479 3.971-1.324 6.835-5.07 6.835-9.487 0-5.521-4.481-10.002-10.002-10.002z"/>
-                </svg>
-            </a>
+
+        {/* Second Column (Social Media Links) */}
+        <div className="flex-1 flex justify-center space-x-4">
+          <a href="https://www.instagram.com/cyber_carnival_srmrmp/" aria-label="Instagram">
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
+          </a>
+          <a href="https://www.linkedin.com/in/cyber-carnival-srm-ramapuram-71a63a2b1/" aria-label="LinkedIn">
+            <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          </a>
+          <a href="mailto:hello@cybercarnival.in?subject=CyberCarnival2025" aria-label="Email">
+            <FontAwesomeIcon icon={faEnvelope} size="2x" />
+          </a>
         </div>
-    </div>
-</footer>
+
+        {/* Third Column (Contact Information) */}
+        <div className="flex-1 flex flex-col items-center">
+          <h2 className="font-bold text-lg md:text-2xl">Vignesh M: +91 98221 28899</h2>
+        </div>
+      </div>
+
+      
+    </footer>
   );
 };
 
