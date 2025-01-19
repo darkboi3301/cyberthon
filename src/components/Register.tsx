@@ -127,7 +127,7 @@ function Register() {
           {/* Team Name */}
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-500 text-sm font-bold mb-2"
               htmlFor="teamName"
             >
               Team Name <span className="text-red-500">*</span>
@@ -147,7 +147,7 @@ function Register() {
           {/* Team Leader Name */}
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-500 text-sm font-bold mb-2"
               htmlFor="leaderName"
             >
               Team Leader Name <span className="text-red-500">*</span>
@@ -167,7 +167,7 @@ function Register() {
           {/* Team Leader Phone */}
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-500 text-sm font-bold mb-2"
               htmlFor="leaderPhone"
             >
               Phone Number (Team Leader) <span className="text-red-500">*</span>
@@ -187,7 +187,7 @@ function Register() {
           {/* Team Leader Email */}
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-500 text-sm font-bold mb-2"
               htmlFor="leaderEmail"
             >
               Email (Team Leader) <span className="text-red-500">*</span>
@@ -207,7 +207,7 @@ function Register() {
           {/* College Name */}
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-500 text-sm font-bold mb-2"
               htmlFor="collegeName"
             >
               College Name <span className="text-red-500">*</span>
@@ -227,10 +227,10 @@ function Register() {
           {/* Member 1 Name */}
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-500 text-sm font-bold mb-2"
               htmlFor="member1Name"
             >
-              Member 1 Name
+              Member 2 Name
             </label>
             <input
               className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white"
@@ -239,14 +239,14 @@ function Register() {
               name="member1Name"
               value={teamDetails.member1Name}
               onChange={handleInputChange}
-              placeholder="Enter member 1 name"
+              placeholder="Enter member 2 name"
             />
           </div>
 
           {/* Member 1 Phone */}
           {/* <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-500 text-sm font-bold mb-2"
               htmlFor="member1Phone"
             >
               Member 1 Phone Number
@@ -265,10 +265,10 @@ function Register() {
           {/* Member 2 Name */}
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-500 text-sm font-bold mb-2"
               htmlFor="member2Name"
             >
-              Member 2 Name
+              Member 3 Name
             </label>
             <input
               className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white"
@@ -277,14 +277,14 @@ function Register() {
               name="member2Name"
               value={teamDetails.member2Name}
               onChange={handleInputChange}
-              placeholder="Enter member 2 name"
+              placeholder="Enter member 3 name"
             />
           </div>
 
           {/* Member 2 Phone */}
           {/* <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-500 text-sm font-bold mb-2"
               htmlFor="member2Phone"
             >
               Member 2 Phone Number
@@ -303,10 +303,10 @@ function Register() {
           {/* Member 3 Name */}
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-500 text-sm font-bold mb-2"
               htmlFor="member3Name"
             >
-              Member 3 Name
+              Member 4 Name
             </label>
             <input
               className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white"
@@ -315,14 +315,14 @@ function Register() {
               name="member3Name"
               value={teamDetails.member3Name}
               onChange={handleInputChange}
-              placeholder="Enter member 3 name"
+              placeholder="Enter member 4 name"
             />
           </div>
 
           {/* Member 3 Phone */}
           {/* <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-500 text-sm font-bold mb-2"
               htmlFor="member3Phone"
             >
               Member 3 Phone Number
@@ -339,7 +339,7 @@ function Register() {
           </div> */}
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-500 text-sm font-bold mb-2"
               htmlFor="transactionID"
             >
               Transaction ID <span className="text-red-500">*</span>

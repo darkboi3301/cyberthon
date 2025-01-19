@@ -2,11 +2,12 @@ import React from 'react';
 
 const Timeline = () => {
   const points = [
-    { id: 1, hideDownwards: true, hideUpwards: false, textBelow: '08:30 AM', text: 'Inaugration', position: 'above' },
-    { id: 2, hideDownwards: false, hideUpwards: true, textAbove: '09:00 AM', text: 'Hackathon Starts', position: 'below' },
-    { id: 3, hideDownwards: true, hideUpwards: false, textBelow: '10:00 AM', text: 'Judging-1', position: 'above' },
-    { id: 4, hideDownwards: false, hideUpwards: true, textAbove: '01:00 PM', text: 'Judging-2', position: 'below' },
-    { id: 5, hideDownwards: true, hideUpwards: false, textBelow: '03:00 PM', text: 'Hackathon Ends', position: 'above' },
+    { id: 1, hideDownwards: true, hideUpwards: false, textBelow: 'Feb 1st - 08:30 AM', text: 'Inaugration', position: 'above' },
+    { id: 2, hideDownwards: false, hideUpwards: true, textAbove: 'Feb 1st - 09:00 AM', text: 'Hackathon Starts', position: 'below' },
+    { id: 3, hideDownwards: true, hideUpwards: false, textBelow: 'Feb 1st - 03:00 PM', text: 'Judging Phase-1', position: 'above' },
+    { id: 4, hideDownwards: false, hideUpwards: true, textAbove: 'Feb 1st - 11:00 PM', text: 'Judging Phase-2', position: 'below' },
+    { id: 5, hideDownwards: true, hideUpwards: false, textBelow: 'Feb 2nd - 10:00 AM', text: 'Hackathon Ends', position: 'above' },
+    
   ];
 
   const numPoints = points.length; // Number of points on each line
@@ -46,7 +47,7 @@ const Timeline = () => {
                 >
                   <div className="w-full h-full bg-gray-200 rounded-full "></div> {/* dark white center */}
                   {point.position === 'above' && (
-                    <div className="absolute" style={{ top: '-20px', left: '50%', transform: 'translateX(-50%)', whiteSpace: 'nowrap' }}>
+                    <div className="absolute" style={{ top: '-25px', left: '50%', transform: 'translateX(-50%)', whiteSpace: 'nowrap' }}>
                       {point.text}
                     </div>
                   )}
@@ -88,7 +89,7 @@ const Timeline = () => {
                   <div
                     className="absolute "
                     style={{
-                      top: '-20px',
+                      top: '-30px',
                       left: `calc(${spacing}% + ${(index * (100 - 2 * spacing)) / (numPoints - 1)}%)`,
                       transform: 'translateX(-50%)',
                       whiteSpace: 'nowrap',
@@ -101,7 +102,7 @@ const Timeline = () => {
                   <div
                     className="absolute"
                     style={{
-                      top: '20px',
+                      top: '10px',
                       left: `calc(${spacing}% + ${(index * (100 - 2 * spacing)) / (numPoints - 1)}%)`,
                       transform: 'translateX(-50%)',
                       whiteSpace: 'nowrap',
