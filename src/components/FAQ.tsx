@@ -20,7 +20,7 @@ const FAQ = () => {
         },
         {
             question: "What is the size of a team?",
-            answer: "A maximum of 4 members can be in a team"
+            answer: "A maximum of 4 members can be in a team, i.e., 1 Team Leader and 3 Members"
         },
         {
             question: "What are the essentials participants should bring with them?",
