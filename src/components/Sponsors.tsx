@@ -3,7 +3,7 @@ import React from "react";
 const sponsors = [
   { logo: "yuniq.svg", name: "" },
   { logo: "null.png", name: "" },
-
+  { logo: "disai.png", name: "" },
 ];
 
 const Sponsors = () => {
