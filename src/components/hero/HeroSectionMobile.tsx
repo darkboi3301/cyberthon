@@ -24,7 +24,7 @@ const HeroSectionMobile = () => {
     const vh = window.innerHeight;
 
     // Further reduced font sizes for CYBERTHON and timer text
-    const cyberFontSize = Math.min(vw * 0.13, vh * 0.15); 
+    const cyberFontSize = Math.min(vw * 0.1, vh * 0.15); 
     const timerFontSize = Math.min(vw * 0.06, vh * 0.07); 
 
     cyberTextRef.current.style.fontSize = `${cyberFontSize}px`;
