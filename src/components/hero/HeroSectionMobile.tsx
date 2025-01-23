@@ -10,7 +10,7 @@ const HeroSectionMobile = () => {
   const [timer, setTimer] = useState({
     days: 0,
     hours: 0,
-    minutes: 0
+    minutes: 0,
   });
   const [showRegisterButton, setShowRegisterButton] = useState(false); // State to control register button visibility
   const buttonRef = useRef(null); // Ref for Register Now button
@@ -24,8 +24,8 @@ const HeroSectionMobile = () => {
     const vh = window.innerHeight;
 
     // Further reduced font sizes for CYBERTHON and timer text
-    const cyberFontSize = Math.min(vw * 0.1, vh * 0.15); 
-    const timerFontSize = Math.min(vw * 0.06, vh * 0.07); 
+    const cyberFontSize = Math.min(vw * 0.1, vh * 0.15);
+    const timerFontSize = Math.min(vw * 0.06, vh * 0.07);
 
     cyberTextRef.current.style.fontSize = `${cyberFontSize}px`;
     heroTextRef.current.style.fontSize = `${timerFontSize}px`;
@@ -48,7 +48,9 @@ const HeroSectionMobile = () => {
         return { days: 0, hours: 0, minutes: 0 };
       } else {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
         return { days, hours, minutes };
@@ -114,7 +116,8 @@ const HeroSectionMobile = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          background: "radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%)",
+          background:
+            "radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%)",
           animation: "spotlightMove 5s linear infinite",
           zIndex: 1,
         }}
@@ -174,7 +177,13 @@ const HeroSectionMobile = () => {
         }}
       >
         <p>
-          {`${timer.days}d:${timer.hours.toString().padStart(2, '0')}h:${timer.minutes.toString().padStart(2, '0')}m:${(60 - new Date().getSeconds()).toString().padStart(2, '0')}s`}
+          {`${timer.days}d:${timer.hours
+            .toString()
+            .padStart(2, "0")}h:${timer.minutes
+            .toString()
+            .padStart(2, "0")}m:${(60 - new Date().getSeconds())
+            .toString()
+            .padStart(2, "0")}s`}
         </p>
       </div>
 
@@ -193,6 +202,7 @@ const HeroSectionMobile = () => {
           }}
         >
           <span>Register Now</span>
+          <span className="text-red-600">Only few slots left !</span>
           <span className="text-xl">&#62;</span>
         </button>
       )}
@@ -213,7 +223,10 @@ const HeroSectionMobile = () => {
         <h1 className="text-3xl">
           Feb 01 <br /> & 02
         </h1>
-        <p>A high-stakes arena where <br /> top minds tackle real-world <br /> problems.</p>
+        <p>
+          A high-stakes arena where <br /> top minds tackle real-world <br />{" "}
+          problems.
+        </p>
       </div>
     </div>
   );
