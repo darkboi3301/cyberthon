@@ -23,7 +23,7 @@ const HeroSectionDesktop = () => {
     const vh = window.innerHeight;
 
     // Responsive font size calculations
-    const cyberFontSize = Math.min(vw * 0.15, vh * 0.2); // 15% of viewport width or 20% of height, whichever is smaller
+    const cyberFontSize = Math.min(vw * 0.15, vh * 0.3); // 15% of viewport width or 20% of height, whichever is smaller
     const timerFontSize = Math.min(vw * 0.05, vh * 0.08); // 5% of viewport width or 8% of height
 
     cyberTextRef.current.style.fontSize = `${cyberFontSize}px`;
