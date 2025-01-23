@@ -10,7 +10,7 @@ const HeroSectionDesktop = () => {
   const [timer, setTimer] = useState({
     days: 0,
     hours: 0,
-    minutes: 0
+    minutes: 0,
   });
   const [showRegisterButton, setShowRegisterButton] = useState(false); // State to control the visibility of the register button
   const buttonRef = useRef(null); // Ref for Register Now button
@@ -35,7 +35,7 @@ const HeroSectionDesktop = () => {
     updateTextSizes();
 
     // Add resize listener
-    window.addEventListener('resize', updateTextSizes);
+    window.addEventListener("resize", updateTextSizes);
 
     const targetDate = new Date("2025-02-01T10:00:00"); // Target date and time
 
@@ -47,7 +47,9 @@ const HeroSectionDesktop = () => {
         return { days: 0, hours: 0, minutes: 0 };
       } else {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
         return { days, hours, minutes };
@@ -84,14 +86,14 @@ const HeroSectionDesktop = () => {
       .call(() => {
         setShowRegisterButton(true); // Show the button after animation
         gsap.fromTo(
-          buttonRef.current, 
-          { opacity: 0, y: 50 }, 
+          buttonRef.current,
+          { opacity: 0, y: 50 },
           { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
         ); // Fade-in and slide up animation for the button
       });
 
     return () => {
-      window.removeEventListener('resize', updateTextSizes);
+      window.removeEventListener("resize", updateTextSizes);
       clearInterval(timerInterval);
     };
   }, []);
@@ -105,19 +107,21 @@ const HeroSectionDesktop = () => {
         position: "relative",
         overflow: "hidden",
         marginTop: "20px",
-        background: "linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)", // Lightened vertical gradient
+        background:
+          "linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)", // Lightened vertical gradient
       }}
     >
       {/* Vertical Spotlight Effect */}
-      <div 
+      <div
         style={{
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          background: "radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%)", // Subtle, soft light from top to bottom
-          animation: "spotlightMove 5s linear infinite", 
+          background:
+            "radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%)", // Subtle, soft light from top to bottom
+          animation: "spotlightMove 5s linear infinite",
           zIndex: 1,
         }}
       ></div>
@@ -156,7 +160,7 @@ const HeroSectionDesktop = () => {
           margin: "auto",
           left: "50%",
           top: "55%",
-          transform: "translate(-50%, -50%)"
+          transform: "translate(-50%, -50%)",
         }}
       />
 
@@ -177,27 +181,36 @@ const HeroSectionDesktop = () => {
         }}
       >
         <p>
-          {`${timer.days}d:${timer.hours.toString().padStart(2, '0')}h:${timer.minutes.toString().padStart(2, '0')}m:${(60 - new Date().getSeconds()).toString().padStart(2, '0')}s`}
+          {`${timer.days}d:${timer.hours
+            .toString()
+            .padStart(2, "0")}h:${timer.minutes
+            .toString()
+            .padStart(2, "0")}m:${(60 - new Date().getSeconds())
+            .toString()
+            .padStart(2, "0")}s`}
         </p>
       </div>
 
       {/* Register Button with Animation */}
       {showRegisterButton && (
-        <button
-          ref={buttonRef}
-          onClick={() => nav("/register")}
-          className="bg-white text-black font-semibold text-lg rounded-xl shadow-lg flex items-center space-x-4 transform hover:scale-105 hover:bg-gray-100 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
-          style={{
-            position: "absolute",
-            bottom: "7%",
-            left: "2%",
-            padding: "10px 20px",
-            zIndex: 4
-          }}
-        >
-          <span>Register Now</span>
-          <span className="text-xl">&#62;</span>
-        </button>
+        <>
+          <button
+            ref={buttonRef}
+            onClick={() => nav("/register")}
+            className="bg-white text-black font-semibold text-lg rounded-xl shadow-lg flex items-center space-x-4 transform hover:scale-105 hover:bg-gray-100 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
+            style={{
+              position: "absolute",
+              bottom: "7%",
+              left: "2%",
+              padding: "10px 20px",
+              zIndex: 4,
+            }}
+          >
+            <span>Register Now</span>
+            <span className="text-red-600">Only few slots left !</span>
+            <span className="text-xl">&#62;</span>
+          </button>
+        </>
       )}
 
       {/* Additional Info */}
@@ -210,13 +223,16 @@ const HeroSectionDesktop = () => {
           color: "#fff",
           border: "none",
           borderRadius: "5px",
-          zIndex: 4
+          zIndex: 4,
         }}
       >
         <h1 className="text-3xl">
           Feb 01 <br /> & 02
         </h1>
-        <p>A high-stakes arena where <br /> top minds tackle real-world <br /> problems.</p>
+        <p>
+          A high-stakes arena where <br /> top minds tackle real-world <br />{" "}
+          problems.
+        </p>
       </div>
     </div>
   );

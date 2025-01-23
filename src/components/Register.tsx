@@ -303,7 +303,7 @@ function Register() {
           {/* Member 3 Name */}
           <div className="mb-4">
             <label
-              className="block text-gray-500 text-sm font-bold mb-2"
+              className="block text-black text-sm font-bold mb-2"
               htmlFor="member3Name"
             >
               Member 4 Name
@@ -315,7 +315,7 @@ function Register() {
               name="member3Name"
               value={teamDetails.member3Name}
               onChange={handleInputChange}
-              placeholder="Enter member 4 name"
+              placeholder=""
             />
           </div>
 
@@ -400,6 +400,7 @@ function Register() {
         {/* Submit Button */}
         <div className="flex justify-center mt-6">
           <button
+            disabled={isSubmitting}
             type="submit"
             className="px-4 py-2 bg-black border border-white text-white rounded-md hover:bg-zinc-700"
           >
@@ -416,7 +417,7 @@ function Register() {
             <div className="mt-4">
               {
                 <div>
-                  <img src="/QR.png" alt="QR code" className="w-full h-auto" />
+                  <img src="/QR.jpeg" alt="QR code" className="w-full h-auto" />
                 </div>
               }
             </div>
