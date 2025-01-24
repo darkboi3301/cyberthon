@@ -13,7 +13,7 @@ const FAQ = () => {
     },
     {
       question: "What is the registration fee for Cyberthon?",
-      answer: "The registration fee for Cyberthon is Rs.1000",
+      answer: "The registration fee for Cyberthon is Rs.1500",
     },
     {
       question: "What's the duration of cyberthon?",
