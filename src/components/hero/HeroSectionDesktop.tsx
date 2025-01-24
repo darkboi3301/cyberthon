@@ -226,9 +226,7 @@ const HeroSectionDesktop = () => {
           zIndex: 4,
         }}
       >
-        <h1 className="text-3xl">
-          Feb 01 <br /> & 02
-        </h1>
+        <h1 className="text-3xl">Feb 01 & 02</h1>
         <p>
           A high-stakes arena where <br /> top minds tackle real-world <br />{" "}
           problems.
