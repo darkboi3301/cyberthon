@@ -1,9 +1,10 @@
 import React from "react";
 
 const sponsors = [
-  { logo: "yuniq.svg", name: "" },
+  { logo: "yuniq.png", name: "" },
   { logo: "null.png", name: "" },
   { logo: "disai.png", name: "" },
+  { logo: "guvi.png", name: "" },
 ];
 
 const Sponsors = () => {
@@ -43,9 +44,22 @@ const Sponsors = () => {
           }}
         >
           {sponsors.map((sponsor, index) => (
-            <div key={index} style={{ display: 'flex', alignItems: 'center', marginRight: index !== sponsors.length - 1 ? '2rem' : '0', minWidth: '150px',paddingBottom:"2rem", }}>
-              <img src={`/sponsors/${sponsor.logo}`} alt={sponsor.name} style={{ maxHeight: '80px', marginRight: '1rem' }} />
-              <p style={{ fontSize: '0.875rem' }}>{sponsor.name}</p>
+            <div
+              key={index}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginRight: index !== sponsors.length - 1 ? "2rem" : "0",
+                minWidth: "150px",
+                paddingBottom: "2rem",
+              }}
+            >
+              <img
+                src={`/sponsors/${sponsor.logo}`}
+                alt={sponsor.name}
+                style={{ maxHeight: "80px", marginRight: "1rem" }}
+              />
+              <p style={{ fontSize: "0.875rem" }}>{sponsor.name}</p>
             </div>
           ))}
         </div>
@@ -57,9 +71,7 @@ const Sponsors = () => {
             bottom: 0,
             height: "2px",
           }}
-        >
-          
-        </div>
+        ></div>
       </div>
     </div>
   );
