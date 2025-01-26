@@ -196,7 +196,6 @@ const HeroSectionDesktop = () => {
         <>
           <button
             ref={buttonRef}
-            onClick={() => nav("/register")}
             className="bg-white text-black font-semibold text-lg rounded-xl shadow-lg flex items-center space-x-4 transform hover:scale-105 hover:bg-gray-100 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
             style={{
               position: "absolute",
@@ -206,9 +205,7 @@ const HeroSectionDesktop = () => {
               zIndex: 4,
             }}
           >
-            <span>Register Now</span>
-            <span className="text-red-600">Only 1 slot left !</span>
-            <span className="text-xl">&#62;</span>
+            <span className="text-red-600">Registrations Closed</span>
           </button>
         </>
       )}

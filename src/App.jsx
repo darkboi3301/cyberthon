@@ -12,10 +12,9 @@ import NavbarMobile from "./components/navbar/NavBarMobile";
 import FAQ from "./components/FAQ";
 import Scroll from "./components/Scroll";
 import Home from "./components/Home";
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from "./components/Register.tsx";
 import ContactUs from "./components/ContactUs.tsx";
-
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -30,25 +29,24 @@ function App() {
 
   return (
     <BrowserRouter>
-    <Scroll/>
-    <div style={{ backgroundColor: "#000" }}>
-      {isMobile ? <NavbarMobile /> :   <NavBar />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-      <div
-            style={{
-              width: "70%",
-              height: "2px",
-              margin: "0 auto",
-              background:
-                "linear-gradient(to right, rgba(0, 0, 0, 0.1), #ffffff, rgba(0, 0, 0, 0.1))",
-            }}
-          ></div>
-      {isMobile ? <FooterMobile /> : <FooterDesktop />}
-    </div>
+      <Scroll />
+      <div style={{ backgroundColor: "#000" }}>
+        {isMobile ? <NavbarMobile /> : <NavBar />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contactus" element={<ContactUs />} />
+        </Routes>
+        <div
+          style={{
+            width: "70%",
+            height: "2px",
+            margin: "0 auto",
+            background:
+              "linear-gradient(to right, rgba(0, 0, 0, 0.1), #ffffff, rgba(0, 0, 0, 0.1))",
+          }}
+        ></div>
+        {isMobile ? <FooterMobile /> : <FooterDesktop />}
+      </div>
     </BrowserRouter>
   );
 }
