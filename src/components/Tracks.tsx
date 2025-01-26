@@ -50,7 +50,7 @@ const Tracks = () => {
             icon: "s5.svg",
             title: "Internet of Things",
             description:
-              "Develop a system that identifies IoT devices compromised by botnets and provides a plan for containment and remediation.",
+              "Develop a system that identifies IoT devices compromised by botnets and provides a plan for containment and remediation with suitable test cases.",
             width: 50,
             height: 50,
           },
