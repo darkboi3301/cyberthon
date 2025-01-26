@@ -202,7 +202,7 @@ const HeroSectionMobile = () => {
           }}
         >
           <span>Register Now</span>
-          <span className="text-red-600">Only few slots left !</span>
+          <span className="text-red-600">Only 1 slot left !</span>
           <span className="text-xl">&#62;</span>
         </button>
       )}
